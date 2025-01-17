@@ -1,34 +1,41 @@
+import random
 
 #define the choices array
-choices = ['rock', 'paper', 'scissors']
+choices = ["Rock", "Paper", "Scissors"]
 
-def main ():
-    user_input=input("Enter your choice: rock, paper, or scissors: ").capatalize()
+def main():
+    try:
+        user_input = input("Enter your choice (Rock, Paper, Scissors)").capitalize()
 
-#validate user input
-if user_input not in input
- raise ValueError("Invalid input. Please enter rock, paper, or scissors.")
+        # Validate user input
+        if user_input not in choices:
+            raise ValueError("Invalid choice! Please enter 'Rock', 'Paper, 'Scissors'")
 
- #convert the user input to an index
- player_choice = choices.index(user_input)
- 
- #get the computer choice
- computer_choice = random.randint(0,2)
- print(f"Player chose {choices[player_choice]}")
- print(f"Computer chose {choices[computer_choice]}")   
+        # Convert the user input to an index
+        player_choice = choices.index(user_input)
 
-#determine the winner
+        # Randomly select the computer choice
+        computer_choice = random.randint(0,2)
 
-if player_choice == computer_choice:
-    print("It's a tie!")
-elif player_choice == 0 and computer_choice == 2 or \
-    player_choice == 1 and computer_choice == 0 or \
-    player_choice == 2 and computer_choice == 1:
-    print("Player wins!") 
-else:
-    print("Computer wins!")
- 
-return True
+        print(f"Player chose {choices[player_choice]}")    
+        print(f"Computer chose {choices[computer_choice]}")    
 
-#Run the game
+        # Determine the winer
+        if player_choice == computer_choice:
+            print("It's a tie!")
+        elif (player_choice == 0 and computer_choice==2) or \
+             (player_choice == 1 and computer_choice == 0) or \
+             (player_choice == 2 and computer_choice == 1):
+            print("Player wins!")
+        else:
+            print("Computer wins!")  
+    except ValueError as e:
+        print(f"Error {e}")
 
+
+
+
+
+# Run the game
+if __name__ == "__main__":
+    main()
