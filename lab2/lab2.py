@@ -1,7 +1,7 @@
 # # Import the random library to use for the dice later
 import random
 
-# # Define Variables
+# # Define Variablesgit 
 # numLives = 10           # number of player's lives remaining
 # mNumLives = 12          # number of monster's lives remaining
 
