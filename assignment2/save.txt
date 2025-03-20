@@ -1,0 +1,10 @@
+Monster won the fight.
+Monsters killed this session: 0
+Total monsters killed: 0
+Monster won the fight.
+Monsters killed this session: 0
+Total monsters killed: 0
+Hero DE won the fight and gained 3 stars.
+Total monsters killed: 1
+Hero DE won the fight and gained 1 stars.
+Total monsters killed: 1
